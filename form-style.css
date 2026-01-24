@@ -1,0 +1,133 @@
+
+/* Update Card Size for larger form */
+.card {
+  width: 800px; /* Wider card */
+  max-width: 95%; /* Responsive backup */
+  max-height: 85vh; /* Allow scrolling */
+  overflow-y: auto;
+}
+
+/* Grid Layouts */
+.row {
+    display: flex;
+    gap: 10px;
+    margin-bottom: 2px;
+}
+
+.row .field__input {
+    width: 100%;
+}
+
+.col {
+    flex: 1;
+}
+
+.full-width {
+    width: 100%;
+    margin-bottom: 4px;
+    display: block;
+}
+
+/* Section Divider */
+.section-divider {
+    display: flex;
+    align-items: center;
+    margin: 20px 0 15px;
+    color: var(--muted);
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+.section-divider::before, .section-divider::after {
+    content: "";
+    flex: 1;
+    height: 1px;
+    background: var(--cardBorder);
+}
+.section-divider span {
+    padding: 0 10px;
+}
+
+/* Radio Groups */
+.rating-group {
+    margin-bottom: 15px;
+    background: rgba(255,255,255,0.03);
+    padding: 10px;
+    border-radius: 8px;
+    border: 1px solid transparent;
+}
+.rating-group:focus-within {
+    border-color: var(--focus);
+}
+
+.radio-options {
+    display: flex;
+    flex-wrap: wrap; /* allow wrapping on small screens */
+    gap: 8px;
+    margin-top: 5px;
+}
+
+.radio-btn {
+    cursor: pointer;
+    font-size: 0.8rem;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 4px 8px;
+    border-radius: 4px;
+    background: rgba(255,255,255,0.05);
+    transition: all 0.2s;
+    flex: 1; /* Distribute space */
+    justify-content: center;
+    white-space: nowrap;
+}
+
+.radio-btn:hover {
+    background: rgba(255,255,255,0.1);
+}
+
+.radio-btn input {
+    accent-color: var(--focus);
+}
+
+/* Checkbox */
+.field-check {
+    margin: 15px 0;
+    font-size: 0.9rem;
+    color: var(--muted);
+}
+.checkbox-container {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    cursor: pointer;
+}
+
+/* Form Spacing */
+.field-group {
+    margin-bottom: 12px;
+}
+
+/* Scrollbar for the card */
+.card::-webkit-scrollbar {
+    width: 6px;
+}
+.card::-webkit-scrollbar-thumb {
+    background: rgba(255,255,255,0.2);
+    border-radius: 3px;
+}
+
+/* Vertical Radio Options */
+.radio-options.vertical {
+    flex-direction: column;
+    align-items: flex-start;
+}
+.radio-options.vertical .radio-btn {
+    width: 100%;
+    justify-content: flex-start;
+    padding: 8px 12px;
+    background: transparent; /* reset background if needed, or keep it */
+}
+.radio-options.vertical .radio-btn:hover {
+    background: rgba(255,255,255,0.05);
+}
